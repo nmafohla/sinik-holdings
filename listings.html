@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SINIK Holdings | Zimbabwe Property Marketplace</title>
+    <title>Property Listings across Zimbabwe | SINIK Holdings</title>
     <meta
       name="description"
-      content="Zimbabwe-focused property marketplace with USD/ZiG pricing, verified agents, WhatsApp inquiries, lease support and mobile-first listings."
+      content="Browse verified residential houses, commercial buildings, and prime stands across Harare, Bulawayo, and Victoria Falls. Clean Title Deeds & dual USD/ZiG pricing."
     />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
@@ -19,287 +19,242 @@
           <img src="assets/images/sinik-logo.jpg" alt="SINIK Holdings logo" />
           <strong>SINIK Holdings</strong>
         </a>
-
         <button class="menu-btn" onclick="toggleMenu()">Menu</button>
-
         <nav class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="listings.html">Listings</a>
           <a href="agents.html">Agents</a>
           <a href="compare.html">Compare</a>
           <a href="dashboard.html">Dashboard</a>
+          <div class="currency-switcher">
+            <button class="currency-btn active" data-currency="USD" onclick="setCurrency('USD')">USD</button>
+            <button class="currency-btn" data-currency="ZiG" onclick="setCurrency('ZiG')">ZiG</button>
+          </div>
           <a href="index.html#contact" class="btn btn-primary">List Property</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Property Listings</p>
-            <h1>Search properties across Zimbabwe.</h1>
-            <p>
-              Use filters for rent/sale, location, price range, bedrooms, property type and land
-              size.
-            </p>
+    <main class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Verified Marketplace</p>
+          <h1>Search properties across Zimbabwe.</h1>
+          <p>Explore homes, commercial offices, and land stands with verified Title Deeds, solar backups, and borehole infrastructure.</p>
+        </div>
+
+        <!-- Live Interactive Filter Controls -->
+        <div class="panel" style="margin-bottom: 32px">
+          <div class="search-grid" style="grid-template-columns: 2fr 1fr 1fr auto; gap: 14px">
+            <input type="text" id="filterQuery" placeholder="Search by suburb, keyword, or features (e.g. Borehole, Solar, Pool)..." oninput="filterProperties()" />
+            <select id="filterCity" onchange="filterProperties()">
+              <option value="all">All Cities & Towns</option>
+              <option value="harare">Harare</option>
+              <option value="bulawayo">Bulawayo</option>
+              <option value="vicfalls">Victoria Falls</option>
+              <option value="ruwa">Ruwa</option>
+            </select>
+            <select id="filterType" onchange="filterProperties()">
+              <option value="all">All Property Types</option>
+              <option value="house">House / Residential</option>
+              <option value="stand">Vacant Stand / Land</option>
+              <option value="commercial">Commercial / Industrial</option>
+              <option value="townhouse">Townhouse / Gated</option>
+            </select>
+            <button class="btn btn-primary" onclick="filterProperties()">Filter Results</button>
           </div>
-          <div class="panel">
-            <div class="search-grid">
-              <select>
-                <option>Rent / Sale</option>
-                <option>For Rent</option>
-                <option>For Sale</option>
-                <option>Lease</option>
-              </select>
-              <input type="text" placeholder="Location e.g. Harare, Zvishavane" />
-              <select>
-                <option>Bedrooms</option>
-                <option>1+</option>
-                <option>2+</option>
-                <option>3+</option>
-                <option>4+</option>
-              </select>
-              <select>
-                <option>Property Type</option>
-                <option>House</option>
-                <option>Stand</option>
-                <option>Commercial</option>
-              </select>
-              <input type="number" placeholder="Min price" />
-              <input type="number" placeholder="Max price" />
-            </div>
-          </div>
-          <div style="height: 28px"></div>
-          <div class="card-grid">
-            <article class="property-card">
-              <div class="property-image">
-                <img
-                  src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80"
-                  alt="Modern Family Home in Borrowdale"
-                />
-                <div class="badges">
-                  <span class="badge badge-green">Verified</span>
-                  <span class="badge badge-blue">House for Sale</span>
-                </div>
-              </div>
-              <div class="property-content">
-                <div class="price-row">
-                  <div>
-                    <div class="price">USD 185,000</div>
-                    <p>ZiG equivalent available</p>
-                  </div>
-                  <button class="btn btn-outline" onclick="saveFavorite(this)">♡ Save</button>
-                </div>
-                <h3>Modern Family Home in Borrowdale</h3>
-                <p>Borrowdale, Harare</p>
-                <div class="meta"><span>4 Beds • 3 Baths • 850m²</span></div>
-                <div class="actions">
-                  <a class="btn btn-primary" href="property-details.html">View Details</a>
-                  <a
-                    class="btn btn-whatsapp"
-                    href="https://wa.me/263000000000?text=Hello,%20I%20am%20interested%20in%20Modern%20Family%20Home%20in%20Borrowdale"
-                    target="_blank"
-                    >WhatsApp Agent</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <article class="property-card">
-              <div class="property-image">
-                <img
-                  src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80"
-                  alt="3-Bedroom Rental in Zvishavane"
-                />
-                <div class="badges">
-                  <span class="badge badge-green">Verified</span>
-                  <span class="badge badge-blue">House for Rent</span>
-                </div>
-              </div>
-              <div class="property-content">
-                <div class="price-row">
-                  <div>
-                    <div class="price">USD 250/month</div>
-                    <p>ZiG accepted</p>
-                  </div>
-                  <button class="btn btn-outline" onclick="saveFavorite(this)">♡ Save</button>
-                </div>
-                <h3>3-Bedroom Rental in Zvishavane</h3>
-                <p>Zvishavane</p>
-                <div class="meta"><span>3 Beds • 2 Baths • Walled</span></div>
-                <div class="actions">
-                  <a class="btn btn-primary" href="property-details.html">View Details</a>
-                  <a
-                    class="btn btn-whatsapp"
-                    href="https://wa.me/263000000000?text=Hello,%20I%20am%20interested%20in%203-Bedroom%20Rental%20in%20Zvishavane"
-                    target="_blank"
-                    >WhatsApp Agent</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <article class="property-card">
-              <div class="property-image">
-                <img
-                  src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80"
-                  alt="Residential Stand in Ruwa"
-                />
-                <div class="badges">
-                  <span class="badge badge-green">Verified</span>
-                  <span class="badge badge-blue">Residential Stand</span>
-                </div>
-              </div>
-              <div class="property-content">
-                <div class="price-row">
-                  <div>
-                    <div class="price">USD 22,500</div>
-                    <p>ZiG equivalent available</p>
-                  </div>
-                  <button class="btn btn-outline" onclick="saveFavorite(this)">♡ Save</button>
-                </div>
-                <h3>Residential Stand in Ruwa</h3>
-                <p>Ruwa, Mashonaland East</p>
-                <div class="meta"><span>500m² • Serviced • Title Deeds</span></div>
-                <div class="actions">
-                  <a class="btn btn-primary" href="property-details.html">View Details</a>
-                  <a
-                    class="btn btn-whatsapp"
-                    href="https://wa.me/263000000000?text=Hello,%20I%20am%20interested%20in%20Residential%20Stand%20in%20Ruwa"
-                    target="_blank"
-                    >WhatsApp Agent</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <article class="property-card">
-              <div class="property-image">
-                <img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
-                  alt="Commercial Property in Bulawayo CBD"
-                />
-                <div class="badges">
-                  <span class="badge badge-green">Verified</span>
-                  <span class="badge badge-blue">Commercial</span>
-                </div>
-              </div>
-              <div class="property-content">
-                <div class="price-row">
-                  <div>
-                    <div class="price">USD 420,000</div>
-                    <p>USD preferred</p>
-                  </div>
-                  <button class="btn btn-outline" onclick="saveFavorite(this)">♡ Save</button>
-                </div>
-                <h3>Commercial Property in Bulawayo CBD</h3>
-                <p>Bulawayo CBD</p>
-                <div class="meta"><span>Offices • Parking • High Foot Traffic</span></div>
-                <div class="actions">
-                  <a class="btn btn-primary" href="property-details.html">View Details</a>
-                  <a
-                    class="btn btn-whatsapp"
-                    href="https://wa.me/263000000000?text=Hello,%20I%20am%20interested%20in%20Commercial%20Property%20in%20Bulawayo%20CBD"
-                    target="_blank"
-                    >WhatsApp Agent</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <article class="property-card">
-              <div class="property-image">
-                <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
-                  alt="Townhouse in Mount Pleasant"
-                />
-                <div class="badges">
-                  <span class="badge badge-green">Verified</span>
-                  <span class="badge badge-blue">Townhouse Lease</span>
-                </div>
-              </div>
-              <div class="property-content">
-                <div class="price-row">
-                  <div>
-                    <div class="price">USD 1,100/month</div>
-                    <p>ZiG rental option</p>
-                  </div>
-                  <button class="btn btn-outline" onclick="saveFavorite(this)">♡ Save</button>
-                </div>
-                <h3>Townhouse in Mount Pleasant</h3>
-                <p>Mount Pleasant, Harare</p>
-                <div class="meta"><span>3 Beds • 2 Baths • Borehole</span></div>
-                <div class="actions">
-                  <a class="btn btn-primary" href="property-details.html">View Details</a>
-                  <a
-                    class="btn btn-whatsapp"
-                    href="https://wa.me/263000000000?text=Hello,%20I%20am%20interested%20in%20Townhouse%20in%20Mount%20Pleasant"
-                    target="_blank"
-                    >WhatsApp Agent</a
-                  >
-                </div>
-              </div>
-            </article>
-
-            <article class="property-card">
-              <div class="property-image">
-                <img
-                  src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
-                  alt="Investment Land Near Victoria Falls"
-                />
-                <div class="badges">
-                  <span class="badge badge-green">Verified</span>
-                  <span class="badge badge-blue">Investment Land</span>
-                </div>
-              </div>
-              <div class="property-content">
-                <div class="price-row">
-                  <div>
-                    <div class="price">USD 95,000</div>
-                    <p>ZiG equivalent available</p>
-                  </div>
-                  <button class="btn btn-outline" onclick="saveFavorite(this)">♡ Save</button>
-                </div>
-                <h3>Investment Land Near Victoria Falls</h3>
-                <p>Victoria Falls</p>
-                <div class="meta"><span>2,000m² • Tourism Zone</span></div>
-                <div class="actions">
-                  <a class="btn btn-primary" href="property-details.html">View Details</a>
-                  <a
-                    class="btn btn-whatsapp"
-                    href="https://wa.me/263000000000?text=Hello,%20I%20am%20interested%20in%20Investment%20Land%20Near%20Victoria%20Falls"
-                    target="_blank"
-                    >WhatsApp Agent</a
-                  >
-                </div>
-              </div>
-            </article>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px; font-weight: 700; color: var(--muted); font-size: 0.9rem">
+            <span id="listingCount">Showing 9 of 9 verified listings</span>
+            <span>✓ All listings verified by SINIK Legal Registry</span>
           </div>
         </div>
-      </section>
+
+        <!-- 9 Rich Property Listing Cards -->
+        <div class="card-grid">
+          <!-- Card 1 -->
+          <div class="property-card" data-city="harare" data-type="house">
+            <div class="property-image">
+              <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" alt="Borrowdale Mansion" fetchpriority="high" />
+              <div class="badges"><span class="badge badge-green">✓ Title Deed</span><span class="badge badge-blue">⚡ 10kVA Solar</span></div>
+            </div>
+            <div class="property-content">
+              <div class="price-row"><span class="price" data-usd="420000">USD 420,000</span><span class="badge badge-warning">Borrowdale West</span></div>
+              <h3>Modern Family Home, Borrowdale</h3>
+              <p>5 Beds &bull; 4 Baths &bull; 2,400 m² Stand &bull; Prolific Borehole + Pool</p>
+              <div class="actions">
+                <a href="property-details.html" class="btn btn-primary">View Listing</a>
+                <button class="btn btn-outline" onclick="saveFavorite(this, 'SH-01')">♡ Save</button>
+                <a href="https://wa.me/263772000000?text=Inquiry%20Borrowdale%20(Ref%3ASH-01)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="property-card" data-city="harare" data-type="house">
+            <div class="property-image">
+              <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" alt="Highlands Residence" loading="lazy" />
+              <div class="badges"><span class="badge badge-green">✓ Title Deed</span><span class="badge badge-blue">💧 85m Borehole</span></div>
+            </div>
+            <div class="property-content">
+              <div class="price-row"><span class="price" data-usd="360000">USD 360,000</span><span class="badge badge-warning">Highlands</span></div>
+              <h3>Executive Residence, Highlands</h3>
+              <p>4 Beds &bull; 3.5 Baths &bull; 2,000 m² &bull; Solar Backup + Staff Quarters</p>
+              <div class="actions">
+                <a href="property-details.html" class="btn btn-primary">View Listing</a>
+                <button class="btn btn-outline" onclick="saveFavorite(this, 'SH-02')">♡ Save</button>
+                <a href="https://wa.me/263772000000?text=Inquiry%20Highlands%20(Ref%3ASH-02)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="property-card" data-city="bulawayo" data-type="house">
+            <div class="property-image">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Kumalo Colonial Home" loading="lazy" />
+              <div class="badges"><span class="badge badge-green">✓ Title Deed</span><span class="badge badge-blue">Burnside / Kumalo</span></div>
+            </div>
+            <div class="property-content">
+              <div class="price-row"><span class="price" data-usd="195000">USD 195,000</span><span class="badge badge-warning">Bulawayo Suburbs</span></div>
+              <h3>Classic Suburban Villa, Kumalo</h3>
+              <p>4 Beds &bull; 2 Baths &bull; 2,800 m² &bull; Rich Garden, Borehole & Garage</p>
+              <div class="actions">
+                <a href="property-details.html" class="btn btn-primary">View Listing</a>
+                <button class="btn btn-outline" onclick="saveFavorite(this, 'SH-03')">♡ Save</button>
+                <a href="https://wa.me/263772000000?text=Inquiry%20Kumalo%20(Ref%3ASH-03)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="property-card" data-city="harare" data-type="stand">
+            <div class="property-image">
+              <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Borrowdale Brooke Stand" loading="lazy" />
+              <div class="badges"><span class="badge badge-green">Gated Estate</span><span class="badge badge-dark">Ready to Build</span></div>
+            </div>
+            <div class="property-content">
+              <div class="price-row"><span class="price" data-usd="95000">USD 95,000</span><span class="badge badge-warning">Harare North</span></div>
+              <h3>Serviced Residential Stand, Pomona</h3>
+              <p>1,200 m² &bull; Tarred Roads &bull; ZESA Line Installed &bull; Title Deed in Process</p>
+              <div class="actions">
+                <a href="property-details.html" class="btn btn-primary">View Listing</a>
+                <button class="btn btn-outline" onclick="saveFavorite(this, 'SH-04')">♡ Save</button>
+                <a href="https://wa.me/263772000000?text=Inquiry%20Pomona%20Stand%20(Ref%3ASH-04)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="property-card" data-city="harare" data-type="commercial">
+            <div class="property-image">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Harare Commercial Park" loading="lazy" />
+              <div class="badges"><span class="badge badge-green">Prime ROI</span><span class="badge badge-blue">High Yield</span></div>
+            </div>
+            <div class="property-content">
+              <div class="price-row"><span class="price" data-usd="850000">USD 850,000</span><span class="badge badge-warning">Eastlea / Newlands</span></div>
+              <h3>Modern Office Complex, Newlands</h3>
+              <p>12 Suites &bull; 40 Parking Bays &bull; 30kVA Generator & Solar &bull; 10% Net Yield</p>
+              <div class="actions">
+                <a href="property-details.html" class="btn btn-primary">View Listing</a>
+                <button class="btn btn-outline" onclick="saveFavorite(this, 'SH-05')">♡ Save</button>
+                <a href="https://wa.me/263772000000?text=Inquiry%20Commercial%20Newlands%20(Ref%3ASH-05)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"
+                  >WhatsApp</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="property-card" data-city="harare" data-type="townhouse">
+            <div class="property-image">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Avondale Townhouse" loading="lazy" />
+              <div class="badges"><span class="badge badge-green">Lock & Go</span><span class="badge badge-blue">Gated</span></div>
+            </div>
+            <div class="property-content">
+              <div class="price-row"><span class="price" data-usd="240000">USD 240,000</span><span class="badge badge-warning">Avondale</span></div>
+              <h3>Luxury Gated Townhouse, Avondale</h3>
+              <p>3 Beds &bull; 2.5 Baths &bull; Private Garden &bull; Solar Backup & Prolific Water</p>
+              <div class="actions">
+                <a href="property-details.html" class="btn btn-primary">View Listing</a>
+                <button class="btn btn-outline" onclick="saveFavorite(this, 'SH-06')">♡ Save</button>
+                <a href="https://wa.me/263772000000?text=Inquiry%20Avondale%20(Ref%3ASH-06)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="property-card" data-city="vicfalls" data-type="house">
+            <div class="property-image">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Victoria Falls Eco Villa" loading="lazy" />
+              <div class="badges"><span class="badge badge-green">Tourism Zone</span><span class="badge badge-blue">Airbnb Ready</span></div>
+            </div>
+            <div class="property-content">
+              <div class="price-row"><span class="price" data-usd="495000">USD 495,000</span><span class="badge badge-warning">Victoria Falls</span></div>
+              <h3>Safari Boutique Villa, Victoria Falls</h3>
+              <p>4 Luxury Suites &bull; Teak Decks &bull; Infinity Pool &bull; High-Occupancy Airbnb</p>
+              <div class="actions">
+                <a href="property-details.html" class="btn btn-primary">View Listing</a>
+                <button class="btn btn-outline" onclick="saveFavorite(this, 'SH-07')">♡ Save</button>
+                <a href="https://wa.me/263772000000?text=Inquiry%20Vic%20Falls%20(Ref%3ASH-07)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="property-card" data-city="ruwa" data-type="stand">
+            <div class="property-image">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Ruwa Agricultural Stand" loading="lazy" />
+              <div class="badges"><span class="badge badge-green">Ready Deeds</span><span class="badge badge-dark">Subdivision</span></div>
+            </div>
+            <div class="property-content">
+              <div class="price-row"><span class="price" data-usd="45000">USD 45,000</span><span class="badge badge-warning">Ruwa East</span></div>
+              <h3>Residential Stand, Ruwa Country Club</h3>
+              <p>2,000 m² &bull; Red Soil &bull; ZESA Grid Connected &bull; Clean Deeds</p>
+              <div class="actions">
+                <a href="property-details.html" class="btn btn-primary">View Listing</a>
+                <button class="btn btn-outline" onclick="saveFavorite(this, 'SH-08')">♡ Save</button>
+                <a href="https://wa.me/263772000000?text=Inquiry%20Ruwa%20Stand%20(Ref%3ASH-08)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="property-card" data-city="harare" data-type="house">
+            <div class="property-image">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Mt Pleasant House" loading="lazy" />
+              <div class="badges"><span class="badge badge-green">✓ Title Deed</span><span class="badge badge-blue">Pool + Solar</span></div>
+            </div>
+            <div class="property-content">
+              <div class="price-row"><span class="price" data-usd="310000">USD 310,000</span><span class="badge badge-warning">Mt Pleasant</span></div>
+              <h3>Modern Contemporary Villa, Mt Pleasant</h3>
+              <p>4 Beds &bull; 3 Baths &bull; 1,800 m² &bull; Fully Off-Grid Solar & Borehole</p>
+              <div class="actions">
+                <a href="property-details.html" class="btn btn-primary">View Listing</a>
+                <button class="btn btn-outline" onclick="saveFavorite(this, 'SH-09')">♡ Save</button>
+                <a href="https://wa.me/263772000000?text=Inquiry%20Mt%20Pleasant%20(Ref%3ASH-09)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
       <div class="container footer-grid">
         <div>
           <strong>SINIK Holdings</strong>
-          <p>Building Tomorrow, Together.</p>
+          <p>Zimbabwe's verified property marketplace with USD/ZiG pricing and digital paperwork support.</p>
         </div>
         <div>
-          <p>Zimbabwe property marketplace for buying, renting, leasing and investment.</p>
-          <p>USD/ZiG pricing • Verified agents • WhatsApp-first inquiries</p>
+          <strong>Quick Links</strong>
+          <p><a href="listings.html">Listings</a> &bull; <a href="agents.html">Verified Agents</a> &bull; <a href="compare.html">Compare</a></p>
+        </div>
+        <div>
+          <strong>Regulatory</strong>
+          <p>Compliant with the Estate Agents Council of Zimbabwe (EACZ).</p>
         </div>
       </div>
     </footer>
 
-    <a
-      class="whatsapp-float"
-      href="https://wa.me/263000000000?text=Hello%20SINIK%20Holdings,%20I%20would%20like%20to%20inquire%20about%20a%20property."
-      target="_blank"
-      rel="noopener"
-    >
-      WhatsApp
-    </a>
+    <a href="https://wa.me/263772000000" target="_blank" rel="noopener noreferrer" class="whatsapp-float">💬 WhatsApp Concierge</a>
   </body>
 </html>

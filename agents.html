@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SINIK Holdings | Zimbabwe Property Marketplace</title>
+    <title>Verified Real Estate Agents | SINIK Holdings</title>
     <meta
       name="description"
-      content="Zimbabwe-focused property marketplace with USD/ZiG pricing, verified agents, WhatsApp inquiries, lease support and mobile-first listings."
+      content="Connect directly with EACZ-certified property agents across Harare, Bulawayo, and Victoria Falls. Direct WhatsApp contact and verified track records."
     />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
@@ -19,108 +19,191 @@
           <img src="assets/images/sinik-logo.jpg" alt="SINIK Holdings logo" />
           <strong>SINIK Holdings</strong>
         </a>
-
         <button class="menu-btn" onclick="toggleMenu()">Menu</button>
-
         <nav class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="listings.html">Listings</a>
           <a href="agents.html">Agents</a>
           <a href="compare.html">Compare</a>
           <a href="dashboard.html">Dashboard</a>
+          <div class="currency-switcher">
+            <button class="currency-btn active" data-currency="USD" onclick="setCurrency('USD')">USD</button>
+            <button class="currency-btn" data-currency="ZiG" onclick="setCurrency('ZiG')">ZiG</button>
+          </div>
           <a href="index.html#contact" class="btn btn-primary">List Property</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Agent Profiles</p>
-            <h1>Verified property agents.</h1>
-            <p>
-              Agent profiles build trust with photos, verification status, contact details and
-              active listings.
-            </p>
+    <main class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Certified Realtors</p>
+          <h1>Verified property agents.</h1>
+          <p>Every agent listed on SINIK Holdings is licensed with the Estate Agents Council of Zimbabwe (EACZ) and vetted for title deed integrity.</p>
+        </div>
+
+        <div class="card-grid">
+          <!-- Agent 1 -->
+          <div class="agent-card">
+            <div class="agent-profile">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Ruvimbo Mhere" class="agent-avatar" />
+              <div>
+                <strong>Ruvimbo Mhere</strong>
+                <p style="font-size: 0.85rem">Harare North & Borrowdale Luxury</p>
+                <span class="badge badge-green">EACZ #4812 &bull; 12 Yrs</span>
+              </div>
+            </div>
+            <p>Specializes in high-end estates in Borrowdale, Highlands, and Mt Pleasant with full off-grid solar and borehole infrastructure.</p>
+            <div style="font-size: 0.88rem; font-weight: 700; color: var(--primary-dark)">18 Active Listings &bull; 98% Close Rate</div>
+            <div class="actions">
+              <a
+                href="https://wa.me/263772000000?text=Hi%20Ruvimbo%2C%20I%20saw%20your%20profile%20on%20SINIK%20Holdings."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-whatsapp"
+                >💬 WhatsApp</a
+              >
+              <a href="listings.html" class="btn btn-outline">View Listings</a>
+            </div>
           </div>
-          <div class="card-grid">
-            <div class="agent-card">
-              <div class="agent-profile">
-                <img
-                  class="agent-avatar"
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80"
-                />
-                <div>
-                  <h3>Nyasha Moyo</h3>
-                  <p>Harare Residential Specialist</p>
-                </div>
+
+          <!-- Agent 2 -->
+          <div class="agent-card">
+            <div class="agent-profile">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Tendai Moyo" class="agent-avatar" />
+              <div>
+                <strong>Tendai Moyo</strong>
+                <p style="font-size: 0.85rem">Commercial & Industrial Assets</p>
+                <span class="badge badge-green">EACZ #3941 &bull; 15 Yrs</span>
               </div>
-              <span class="badge badge-green">Verified Agent</span>
-              <p>24 active listings • 8 years experience</p>
-              <a class="btn btn-whatsapp" href="https://wa.me/263000000000" target="_blank"
-                >WhatsApp Agent</a
-              >
             </div>
-            <div class="agent-card">
-              <div class="agent-profile">
-                <img
-                  class="agent-avatar"
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
-                />
-                <div>
-                  <h3>Tawanda Dube</h3>
-                  <p>Commercial & Investment Properties</p>
-                </div>
-              </div>
-              <span class="badge badge-green">Verified Agent</span>
-              <p>17 active listings • Bulawayo & Harare</p>
-              <a class="btn btn-whatsapp" href="https://wa.me/263000000000" target="_blank"
-                >WhatsApp Agent</a
+            <p>Expert in commercial leases, industrial warehousing in Msasa & Graniteside, and retail investments across Harare CBD.</p>
+            <div style="font-size: 0.88rem; font-weight: 700; color: var(--primary-dark)">11 Active Listings &bull; Institutional Advisor</div>
+            <div class="actions">
+              <a
+                href="https://wa.me/263772000000?text=Hi%20Tendai%2C%20I%20have%20a%20commercial%20inquiry%20from%20SINIK%20Holdings."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-whatsapp"
+                >💬 WhatsApp</a
               >
+              <a href="listings.html" class="btn btn-outline">View Listings</a>
             </div>
-            <div class="agent-card">
-              <div class="agent-profile">
-                <img
-                  class="agent-avatar"
-                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80"
-                />
-                <div>
-                  <h3>Rudo Chari</h3>
-                  <p>Stands & New Developments</p>
-                </div>
+          </div>
+
+          <!-- Agent 3 -->
+          <div class="agent-card">
+            <div class="agent-profile">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Chipo Sibanda" class="agent-avatar" />
+              <div>
+                <strong>Chipo Sibanda</strong>
+                <p style="font-size: 0.85rem">Bulawayo Suburbs & Kumalo</p>
+                <span class="badge badge-green">EACZ #5104 &bull; 9 Yrs</span>
               </div>
-              <span class="badge badge-green">Verified Agent</span>
-              <p>31 active listings • Stands and land</p>
-              <a class="btn btn-whatsapp" href="https://wa.me/263000000000" target="_blank"
-                >WhatsApp Agent</a
+            </div>
+            <p>Handles premier family homes and residential land stands in Bulawayo, Burnside, Kumalo, and Hillside.</p>
+            <div style="font-size: 0.88rem; font-weight: 700; color: var(--primary-dark)">14 Active Listings &bull; Matabeleland Lead</div>
+            <div class="actions">
+              <a
+                href="https://wa.me/263772000000?text=Hi%20Chipo%2C%20I%20am%20looking%20for%20property%20in%20Bulawayo."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-whatsapp"
+                >💬 WhatsApp</a
               >
+              <a href="listings.html" class="btn btn-outline">View Listings</a>
+            </div>
+          </div>
+
+          <!-- Agent 4 -->
+          <div class="agent-card">
+            <div class="agent-profile">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Farai Ndlovu" class="agent-avatar" />
+              <div>
+                <strong>Farai Ndlovu</strong>
+                <p style="font-size: 0.85rem">Victoria Falls & Tourism Land</p>
+                <span class="badge badge-green">EACZ #6219 &bull; 11 Yrs</span>
+              </div>
+            </div>
+            <p>Specializes in boutique safari lodges, vacation rentals, and tourism commercial parcels in the Victoria Falls corridor.</p>
+            <div style="font-size: 0.88rem; font-weight: 700; color: var(--primary-dark)">8 Active Listings &bull; Tourism & Hospitality</div>
+            <div class="actions">
+              <a
+                href="https://wa.me/263772000000?text=Hi%20Farai%2C%20I%20have%20an%20inquiry%20for%20Victoria%20Falls%20property."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-whatsapp"
+                >💬 WhatsApp</a
+              >
+              <a href="listings.html" class="btn btn-outline">View Listings</a>
+            </div>
+          </div>
+
+          <!-- Agent 5 -->
+          <div class="agent-card">
+            <div class="agent-profile">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Kudzai Gumbo" class="agent-avatar" />
+              <div>
+                <strong>Kudzai Gumbo</strong>
+                <p style="font-size: 0.85rem">Gated Townhouses & Developments</p>
+                <span class="badge badge-green">EACZ #4402 &bull; 8 Yrs</span>
+              </div>
+            </div>
+            <p>Advising young professionals and diaspora buyers on off-plan cluster developments in Avondale, Greendale, and Ruwa.</p>
+            <div style="font-size: 0.88rem; font-weight: 700; color: var(--primary-dark)">22 Active Listings &bull; Diaspora Concierge</div>
+            <div class="actions">
+              <a href="https://wa.me/263772000000?text=Hi%20Kudzai%2C%20I%20am%20interested%20in%20townhouses." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"
+                >💬 WhatsApp</a
+              >
+              <a href="listings.html" class="btn btn-outline">View Listings</a>
+            </div>
+          </div>
+
+          <!-- Agent 6 -->
+          <div class="agent-card">
+            <div class="agent-profile">
+              <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=400&q=80" alt="Nyasha Mutasa" class="agent-avatar" />
+              <div>
+                <strong>Nyasha Mutasa</strong>
+                <p style="font-size: 0.85rem">Agricultural Land & Estates</p>
+                <span class="badge badge-green">EACZ #3190 &bull; 16 Yrs</span>
+              </div>
+            </div>
+            <p>Expert in commercial farms, horticultural parcels, and peri-urban smallholdings with water rights across Mashonaland.</p>
+            <div style="font-size: 0.88rem; font-weight: 700; color: var(--primary-dark)">12 Active Listings &bull; Agricultural Lead</div>
+            <div class="actions">
+              <a
+                href="https://wa.me/263772000000?text=Hi%20Nyasha%2C%20I%20am%20inquiring%20about%20agricultural%20land."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-whatsapp"
+                >💬 WhatsApp</a
+              >
+              <a href="listings.html" class="btn btn-outline">View Listings</a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
 
     <footer>
       <div class="container footer-grid">
         <div>
           <strong>SINIK Holdings</strong>
-          <p>Building Tomorrow, Together.</p>
+          <p>Zimbabwe's verified property marketplace with USD/ZiG pricing and digital paperwork support.</p>
         </div>
         <div>
-          <p>Zimbabwe property marketplace for buying, renting, leasing and investment.</p>
-          <p>USD/ZiG pricing • Verified agents • WhatsApp-first inquiries</p>
+          <strong>Quick Links</strong>
+          <p><a href="listings.html">Listings</a> &bull; <a href="agents.html">Verified Agents</a> &bull; <a href="compare.html">Compare</a></p>
+        </div>
+        <div>
+          <strong>Regulatory</strong>
+          <p>Compliant with the Estate Agents Council of Zimbabwe (EACZ).</p>
         </div>
       </div>
     </footer>
 
-    <a
-      class="whatsapp-float"
-      href="https://wa.me/263000000000?text=Hello%20SINIK%20Holdings,%20I%20would%20like%20to%20inquire%20about%20a%20property."
-      target="_blank"
-      rel="noopener"
-    >
-      WhatsApp
-    </a>
+    <a href="https://wa.me/263772000000" target="_blank" rel="noopener noreferrer" class="whatsapp-float">💬 WhatsApp Concierge</a>
   </body>
 </html>

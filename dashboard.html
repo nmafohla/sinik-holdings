@@ -3,11 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SINIK Holdings | Zimbabwe Property Marketplace</title>
-    <meta
-      name="description"
-      content="Zimbabwe-focused property marketplace with USD/ZiG pricing, verified agents, WhatsApp inquiries, lease support and mobile-first listings."
-    />
+    <title>Investor & Buyer Dashboard | SINIK Holdings</title>
+    <meta name="description" content="Manage saved properties, scheduled viewings, conveyancing progress, and Zimbabwe real estate market benchmarks with SINIK Holdings." />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
   </head>
@@ -19,113 +16,320 @@
           <img src="assets/images/sinik-logo.jpg" alt="SINIK Holdings logo" />
           <strong>SINIK Holdings</strong>
         </a>
-
         <button class="menu-btn" onclick="toggleMenu()">Menu</button>
-
         <nav class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="listings.html">Listings</a>
           <a href="agents.html">Agents</a>
           <a href="compare.html">Compare</a>
-          <a href="dashboard.html">Dashboard</a>
+          <a href="dashboard.html" class="active">Dashboard</a>
+          <div class="currency-switcher">
+            <button class="currency-btn active" data-currency="USD" onclick="setCurrency('USD')">USD</button>
+            <button class="currency-btn" data-currency="ZiG" onclick="setCurrency('ZiG')">ZiG</button>
+          </div>
           <a href="index.html#contact" class="btn btn-primary">List Property</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Admin Dashboard</p>
-            <h1>Manage properties, agents and inquiries.</h1>
-            <p>
-              Dashboard preview for listing management, verification, users, inquiries and digital
-              paperwork.
-            </p>
+    <main class="section">
+      <div class="container">
+        <!-- Dashboard Header -->
+        <div class="section-heading">
+          <p class="eyebrow">Portfolio & Due Diligence Hub</p>
+          <h1>Investor & Buyer Dashboard</h1>
+          <p>Track your saved properties, scheduled private inspections, title deed conveyancing progress, and suburb market valuations across Zimbabwe.</p>
+        </div>
+
+        <!-- 4 Metric KPI Cards -->
+        <div class="dashboard-cards" style="margin-bottom: 32px">
+          <div class="dashboard-card">
+            <h3>4</h3>
+            <p>Saved Watchlist Properties</p>
+            <span class="badge badge-green" style="margin-top: 6px">All Title Deeds Verified</span>
           </div>
-          <div class="dashboard-grid">
-            <aside class="sidebar">
-              <a>Properties</a><a>Agents</a><a>Inquiries</a><a>Verification</a
-              ><a>Lease Agreements</a><a>Users</a>
-            </aside>
-            <div>
-              <div class="dashboard-cards">
-                <div class="dashboard-card">
-                  <h3>128</h3>
-                  <p>Active listings</p>
+          <div class="dashboard-card">
+            <h3>2</h3>
+            <p>Upcoming Private Viewings</p>
+            <span class="badge badge-blue" style="margin-top: 6px">Harare & Bulawayo</span>
+          </div>
+          <div class="dashboard-card">
+            <h3 data-usd="1280000" class="price">USD 1,280,000</h3>
+            <p>Tracked Pipeline Value</p>
+            <span class="badge badge-warning" style="margin-top: 6px">Avg Yield: 8.4% p.a.</span>
+          </div>
+          <div class="dashboard-card">
+            <h3>80%</h3>
+            <p>Conveyancing Readiness</p>
+            <span class="badge badge-green" style="margin-top: 6px">Deeds Search Cleared</span>
+          </div>
+        </div>
+
+        <!-- Tabbed Navigation Architecture -->
+        <div class="tab-container panel">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(event, 'tab-watchlist')">Saved Watchlist (4)</button>
+            <button class="tab-btn" onclick="switchTab(event, 'tab-inquiries')">Scheduled Viewings (2)</button>
+            <button class="tab-btn" onclick="switchTab(event, 'tab-conveyancing')">Conveyancing & Title Deeds</button>
+            <button class="tab-btn" onclick="switchTab(event, 'tab-analytics')">Suburb Price Benchmarks</button>
+          </div>
+
+          <!-- Tab 1: Saved Watchlist -->
+          <div id="tab-watchlist" class="tab-panel active">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px">
+              <h3>Monitored Listings & Yield Forecasts</h3>
+              <a href="compare.html" class="btn btn-outline">Compare Monitored Properties</a>
+            </div>
+
+            <div class="card-grid">
+              <div class="property-card">
+                <div class="property-image">
+                  <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" alt="Borrowdale Estate" loading="lazy" />
+                  <div class="badges"><span class="badge badge-green">Deed Ready</span></div>
                 </div>
-                <div class="dashboard-card">
-                  <h3>42</h3>
-                  <p>Verified agents</p>
-                </div>
-                <div class="dashboard-card">
-                  <h3>316</h3>
-                  <p>Monthly inquiries</p>
+                <div class="property-content">
+                  <div class="price-row">
+                    <span class="price" data-usd="420000">USD 420,000</span>
+                  </div>
+                  <h3>Modern Family Home</h3>
+                  <p>Borrowdale, Harare &bull; 5 Beds &bull; 10kVA Solar &bull; Borehole</p>
+                  <div class="actions">
+                    <a href="property-details.html" class="btn btn-primary">Details</a>
+                    <a href="https://wa.me/263772000000" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
+                  </div>
                 </div>
               </div>
-              <div class="table-card">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Listing</th>
-                      <th>Location</th>
-                      <th>Price</th>
-                      <th>Status</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Borrowdale Home</td>
-                      <td>Harare</td>
-                      <td>USD 185,000</td>
-                      <td><span class="badge badge-green">Verified</span></td>
-                      <td>Edit</td>
-                    </tr>
-                    <tr>
-                      <td>Zvishavane Rental</td>
-                      <td>Zvishavane</td>
-                      <td>USD 250/mo</td>
-                      <td><span class="badge badge-warning">Pending ID</span></td>
-                      <td>Review</td>
-                    </tr>
-                    <tr>
-                      <td>Ruwa Stand</td>
-                      <td>Ruwa</td>
-                      <td>USD 22,500</td>
-                      <td><span class="badge badge-green">Verified</span></td>
-                      <td>Edit</td>
-                    </tr>
-                  </tbody>
-                </table>
+
+              <div class="property-card">
+                <div class="property-image">
+                  <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" alt="Highlands Villa" loading="lazy" />
+                  <div class="badges"><span class="badge badge-blue">Prime</span></div>
+                </div>
+                <div class="property-content">
+                  <div class="price-row">
+                    <span class="price" data-usd="360000">USD 360,000</span>
+                  </div>
+                  <h3>Highlands Executive Villa</h3>
+                  <p>Highlands, Harare &bull; 4 Beds &bull; 2,000m² &bull; Solar</p>
+                  <div class="actions">
+                    <a href="property-details.html" class="btn btn-primary">Details</a>
+                    <a href="https://wa.me/263772000000" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="property-card">
+                <div class="property-image">
+                  <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Ruwa Stand" loading="lazy" />
+                  <div class="badges"><span class="badge badge-green">Ready to Build</span></div>
+                </div>
+                <div class="property-content">
+                  <div class="price-row">
+                    <span class="price" data-usd="22500">USD 22,500</span>
+                  </div>
+                  <h3>Serviced Stand, Ruwa</h3>
+                  <p>Ruwa &bull; 500 m² &bull; Tarred Roads &bull; Deeds</p>
+                  <div class="actions">
+                    <a href="property-details.html" class="btn btn-primary">Details</a>
+                    <a href="https://wa.me/263772000000" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="property-card">
+                <div class="property-image">
+                  <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80" alt="Kumalo Colonial Manor" loading="lazy" />
+                  <div class="badges"><span class="badge badge-warning">High Yield</span></div>
+                </div>
+                <div class="property-content">
+                  <div class="price-row">
+                    <span class="price" data-usd="285000">USD 285,000</span>
+                  </div>
+                  <h3>Kumalo Colonial Manor</h3>
+                  <p>Kumalo, Bulawayo &bull; 4 Beds &bull; 3,200m² &bull; Borehole</p>
+                  <div class="actions">
+                    <a href="property-details.html" class="btn btn-primary">Details</a>
+                    <a href="https://wa.me/263772000000" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Tab 2: Viewing Inquiries -->
+          <div id="tab-inquiries" class="tab-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px">
+              <h3>Confirmed & In-Progress Inspection Requests</h3>
+              <span class="badge badge-blue">WhatsApp Concierge Assisted</span>
+            </div>
+            <div class="table-card">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date & Time</th>
+                    <th>Property</th>
+                    <th>Assigned EACZ Agent</th>
+                    <th>Status</th>
+                    <th>Quick Contact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Tomorrow &bull; 10:00 AM</strong></td>
+                    <td>Modern Family Home, Borrowdale (Harare)</td>
+                    <td>Ruvimbo Mhere (#EACZ-7842)</td>
+                    <td><span class="badge badge-green">Confirmed In-Person</span></td>
+                    <td>
+                      <a href="https://wa.me/263772000000" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="padding: 6px 12px; font-size: 0.8rem"
+                        >WhatsApp Agent</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Friday &bull; 02:30 PM</strong></td>
+                    <td>Kumalo Colonial Manor (Bulawayo)</td>
+                    <td>Sipho Ndlovu (#EACZ-9014)</td>
+                    <td><span class="badge badge-blue">Virtual 4K Tour Booked</span></td>
+                    <td>
+                      <a href="https://wa.me/263772000000" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="padding: 6px 12px; font-size: 0.8rem"
+                        >WhatsApp Agent</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tab 3: Conveyancing Checklist -->
+          <div id="tab-conveyancing" class="tab-panel">
+            <h3>Statutory Conveyancing & Due Diligence Milestones</h3>
+            <p style="margin-bottom: 20px">Mandatory compliance stages under Zimbabwean Real Estate & Deeds Registries Law:</p>
+
+            <div class="spec-grid">
+              <div class="spec-box">
+                <div class="spec-icon">✓</div>
+                <div class="spec-meta">
+                  <strong>1. Deeds Registry Search</strong>
+                  <span style="color: var(--success); font-weight: 700">Verified & Clean (Deeds Office Harare)</span>
+                  <p style="margin-top: 4px; font-size: 0.85rem">Deed Ref: 4209/2012 unencumbered with zero bonds or caveats registered.</p>
+                </div>
+              </div>
+
+              <div class="spec-box">
+                <div class="spec-icon">✓</div>
+                <div class="spec-meta">
+                  <strong>2. Local Authority Rates Clearance</strong>
+                  <span style="color: var(--success); font-weight: 700">Rates Clearance Certificate Issued</span>
+                  <p style="margin-top: 4px; font-size: 0.85rem">Municipal rates fully paid up to date at Harare City Council.</p>
+                </div>
+              </div>
+
+              <div class="spec-box">
+                <div class="spec-icon">⏳</div>
+                <div class="spec-meta">
+                  <strong>3. ZIMRA Capital Gains Tax (CGT)</strong>
+                  <span style="color: #b45309; font-weight: 700">ZIMRA Assessment Interview Scheduled</span>
+                  <p style="margin-top: 4px; font-size: 0.85rem">Section 10 clearance application submitted by seller's conveyancers.</p>
+                </div>
+              </div>
+
+              <div class="spec-box">
+                <div class="spec-icon">⏳</div>
+                <div class="spec-meta">
+                  <strong>4. Deed of Transfer Lodgement</strong>
+                  <span style="color: #64748b; font-weight: 700">Pending ZIMRA CGT Certificate</span>
+                  <p style="margin-top: 4px; font-size: 0.85rem">Final execution and stamping ready for Chief Registrar endorsement.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Suburb Price Benchmarks -->
+          <div id="tab-analytics" class="tab-panel">
+            <h3>Zimbabwe Suburb Price & Rental Yield Benchmarks (Q3 2026)</h3>
+            <p style="margin-bottom: 16px">Market intelligence compiled from EACZ transaction filings and deeds lodgements:</p>
+            <div class="table-card">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Suburb / Node</th>
+                    <th>City / Province</th>
+                    <th>Land Benchmark (USD/m²)</th>
+                    <th>Median 4-Bed House</th>
+                    <th>Average Rental Yield</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Borrowdale / Brooke</strong></td>
+                    <td>Harare North</td>
+                    <td>$140 - $220 / m²</td>
+                    <td><span class="price" data-usd="395000">USD 395,000</span></td>
+                    <td><strong style="color: var(--success)">7.2% p.a.</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Highlands / Newlands</strong></td>
+                    <td>Harare East</td>
+                    <td>$110 - $185 / m²</td>
+                    <td><span class="price" data-usd="340000">USD 340,000</span></td>
+                    <td><strong style="color: var(--success)">8.0% p.a.</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Kumalo / Suburbs</strong></td>
+                    <td>Bulawayo</td>
+                    <td>$75 - $130 / m²</td>
+                    <td><span class="price" data-usd="270000">USD 270,000</span></td>
+                    <td><strong style="color: var(--success)">8.8% p.a.</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Ruwa / Zimre Park</strong></td>
+                    <td>Mashonaland East</td>
+                    <td>$25 - $45 / m²</td>
+                    <td><span class="price" data-usd="85000">USD 85,000</span></td>
+                    <td><strong style="color: var(--success)">9.5% p.a.</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Victoria Falls Low Density</strong></td>
+                    <td>Matabeleland North</td>
+                    <td>$180 - $290 / m²</td>
+                    <td><span class="price" data-usd="520000">USD 520,000</span></td>
+                    <td><strong style="color: var(--success)">10.8% p.a. (Tourism)</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
     </main>
 
     <footer>
       <div class="container footer-grid">
         <div>
           <strong>SINIK Holdings</strong>
-          <p>Building Tomorrow, Together.</p>
+          <p>Zimbabwe's trusted marketplace for verified residential, commercial, and land investments.</p>
         </div>
         <div>
-          <p>Zimbabwe property marketplace for buying, renting, leasing and investment.</p>
-          <p>USD/ZiG pricing • Verified agents • WhatsApp-first inquiries</p>
+          <strong>Quick Links</strong>
+          <p>
+            <a href="listings.html">All Listings</a> &bull; <a href="agents.html">Verified Agents</a> &bull; <a href="compare.html">Compare</a> &bull;
+            <a href="dashboard.html">Dashboard</a>
+          </p>
+        </div>
+        <div>
+          <strong>Regulatory</strong>
+          <p>Compliant with Estate Agents Council of Zimbabwe (EACZ) standards.</p>
         </div>
       </div>
     </footer>
 
     <a
-      class="whatsapp-float"
-      href="https://wa.me/263000000000?text=Hello%20SINIK%20Holdings,%20I%20would%20like%20to%20inquire%20about%20a%20property."
+      href="https://wa.me/263772000000?text=Hi%20SINIK%20Holdings%2C%20I%20have%20an%20inquiry%20regarding%20my%20dashboard%20portfolio."
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
+      class="whatsapp-float"
+      >💬 WhatsApp Concierge</a
     >
-      WhatsApp
-    </a>
   </body>
 </html>

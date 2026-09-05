@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SINIK Holdings | Zimbabwe Property Marketplace</title>
+    <title>Compare Properties Side-by-Side | SINIK Holdings</title>
     <meta
       name="description"
-      content="Zimbabwe-focused property marketplace with USD/ZiG pricing, verified agents, WhatsApp inquiries, lease support and mobile-first listings."
+      content="Compare verified properties across Zimbabwe side by side. Inspect Title Deed status, solar installation, borehole yield, and statutory transfer fees."
     />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
@@ -19,91 +19,179 @@
           <img src="assets/images/sinik-logo.jpg" alt="SINIK Holdings logo" />
           <strong>SINIK Holdings</strong>
         </a>
-
         <button class="menu-btn" onclick="toggleMenu()">Menu</button>
-
         <nav class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="listings.html">Listings</a>
           <a href="agents.html">Agents</a>
           <a href="compare.html">Compare</a>
           <a href="dashboard.html">Dashboard</a>
+          <div class="currency-switcher">
+            <button class="currency-btn active" data-currency="USD" onclick="setCurrency('USD')">USD</button>
+            <button class="currency-btn" data-currency="ZiG" onclick="setCurrency('ZiG')">ZiG</button>
+          </div>
           <a href="index.html#contact" class="btn btn-primary">List Property</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Property Comparison</p>
-            <h1>Compare properties side by side.</h1>
-            <p>
-              Compare price, location, bedrooms, land size, verification status and agent details.
-            </p>
+    <main class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Property Comparison Studio</p>
+          <h1>Compare properties side by side.</h1>
+          <p>Evaluate infrastructure, utility resilience, title deed security, and purchase fees across premier Zimbabwean developments.</p>
+        </div>
+
+        <!-- 3 Feature Comparison Highlights Cards -->
+        <div class="compare-grid">
+          <div class="compare-card">
+            <div class="property-image">
+              <img
+                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80"
+                alt="Borrowdale"
+                style="border-radius: 16px; margin-bottom: 14px"
+              />
+            </div>
+            <span class="badge badge-green">Option A</span>
+            <h3 style="margin-top: 8px">Borrowdale West Mansion</h3>
+            <div class="price" data-usd="420000">USD 420,000</div>
+            <p style="margin: 10px 0">Harare North &bull; 5 Beds &bull; 4 Baths</p>
+            <a href="property-details.html" class="btn btn-primary" style="width: 100%">View Property</a>
           </div>
-          <div class="compare-grid">
-            <div class="compare-card">
-              <h3>Borrowdale Home</h3>
-              <div class="compare-line"><span>Price</span><strong>USD 185,000</strong></div>
-              <div class="compare-line"><span>Location</span><strong>Harare</strong></div>
-              <div class="compare-line"><span>Bedrooms</span><strong>4</strong></div>
-              <div class="compare-line"><span>Status</span><strong>Verified</strong></div>
+
+          <div class="compare-card">
+            <div class="property-image">
+              <img
+                src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=600&q=80"
+                alt="Highlands"
+                style="border-radius: 16px; margin-bottom: 14px"
+              />
             </div>
-            <div class="compare-card">
-              <h3>Zvishavane Rental</h3>
-              <div class="compare-line"><span>Price</span><strong>USD 250/mo</strong></div>
-              <div class="compare-line"><span>Location</span><strong>Zvishavane</strong></div>
-              <div class="compare-line"><span>Bedrooms</span><strong>3</strong></div>
-              <div class="compare-line"><span>Status</span><strong>Verified</strong></div>
-            </div>
-            <div class="compare-card">
-              <h3>Ruwa Stand</h3>
-              <div class="compare-line"><span>Price</span><strong>USD 22,500</strong></div>
-              <div class="compare-line"><span>Location</span><strong>Ruwa</strong></div>
-              <div class="compare-line"><span>Land size</span><strong>500m²</strong></div>
-              <div class="compare-line"><span>Status</span><strong>Title Deeds</strong></div>
-            </div>
+            <span class="badge badge-blue">Option B</span>
+            <h3 style="margin-top: 8px">Highlands Executive Home</h3>
+            <div class="price" data-usd="360000">USD 360,000</div>
+            <p style="margin: 10px 0">Harare East &bull; 4 Beds &bull; 3.5 Baths</p>
+            <a href="property-details.html" class="btn btn-primary" style="width: 100%">View Property</a>
           </div>
-          <div style="height: 34px"></div>
-          <div class="panel">
-            <h2>Mortgage Calculator</h2>
-            <div class="calculator">
-              <input id="propertyPrice" type="number" placeholder="Property price" value="185000" />
-              <input id="deposit" type="number" placeholder="Deposit" value="25000" />
-              <input id="years" type="number" placeholder="Years" value="20" />
-              <input id="rate" type="number" placeholder="Interest rate %" value="12" />
-              <button class="btn btn-primary" onclick="calculateMortgage()">Calculate</button>
-              <div id="mortgageResult" class="calc-result">
-                Estimated monthly payment will appear here.
-              </div>
+
+          <div class="compare-card">
+            <div class="property-image">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80"
+                alt="Mt Pleasant"
+                style="border-radius: 16px; margin-bottom: 14px"
+              />
             </div>
+            <span class="badge badge-warning">Option C</span>
+            <h3 style="margin-top: 8px">Mt Pleasant Modern Villa</h3>
+            <div class="price" data-usd="310000">USD 310,000</div>
+            <p style="margin: 10px 0">Harare North &bull; 4 Beds &bull; 3 Baths</p>
+            <a href="property-details.html" class="btn btn-primary" style="width: 100%">View Property</a>
           </div>
         </div>
-      </section>
+
+        <!-- Comprehensive Spec-by-Spec Comparison Table -->
+        <div class="table-card" style="margin-top: 36px">
+          <table>
+            <thead>
+              <tr style="background: #f1f5f9">
+                <th style="width: 25%">Specification / Feature</th>
+                <th style="width: 25%">Borrowdale West Mansion</th>
+                <th style="width: 25%">Highlands Executive Home</th>
+                <th style="width: 25%">Mt Pleasant Modern Villa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Listing Price (USD)</strong></td>
+                <td><strong class="price" data-usd="420000">USD 420,000</strong></td>
+                <td><strong class="price" data-usd="360000">USD 360,000</strong></td>
+                <td><strong class="price" data-usd="310000">USD 310,000</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Stand Size</strong></td>
+                <td>2,400 m²</td>
+                <td>2,000 m²</td>
+                <td>1,800 m²</td>
+              </tr>
+              <tr>
+                <td><strong>Building Area</strong></td>
+                <td>480 m²</td>
+                <td>390 m²</td>
+                <td>340 m²</td>
+              </tr>
+              <tr>
+                <td><strong>Title Deed Status</strong></td>
+                <td><span class="badge badge-green">✓ Clean Individual Title Deed</span></td>
+                <td><span class="badge badge-green">✓ Clean Individual Title Deed</span></td>
+                <td><span class="badge badge-green">✓ Clean Individual Title Deed</span></td>
+              </tr>
+              <tr>
+                <td><strong>Solar Power Setup</strong></td>
+                <td>10kVA Hybrid Deye + 15kWh Lithium</td>
+                <td>8kVA Sunsynk + 10kWh Lithium</td>
+                <td>5kVA Growatt + 5kWh Lithium</td>
+              </tr>
+              <tr>
+                <td><strong>Borehole & Water</strong></td>
+                <td>Prolific 85m (4,500 L/hr) + 10,000L tanks</td>
+                <td>Tested 70m (3,200 L/hr) + 5,000L tank</td>
+                <td>Active 65m (2,800 L/hr) + 5,000L tank</td>
+              </tr>
+              <tr>
+                <td><strong>Swimming Pool</strong></td>
+                <td>Yes, Full Olympic Size + Gazebo</td>
+                <td>Yes, Saltwater Plunge Pool</td>
+                <td>Yes, Modern Overflow Pool</td>
+              </tr>
+              <tr>
+                <td><strong>Staff Accommodations</strong></td>
+                <td>2-room self-contained quarters</td>
+                <td>1-room staff quarters</td>
+                <td>1-room staff quarters</td>
+              </tr>
+              <tr>
+                <td><strong>Estimated Stamp Duty</strong></td>
+                <td>~USD 16,800</td>
+                <td>~USD 14,400</td>
+                <td>~USD 12,400</td>
+              </tr>
+              <tr>
+                <td><strong>Est. Legal Conveyancing</strong></td>
+                <td>~USD 12,600</td>
+                <td>~USD 10,800</td>
+                <td>~USD 9,300</td>
+              </tr>
+              <tr>
+                <td><strong>Action</strong></td>
+                <td><a href="property-details.html" class="btn btn-primary">Choose Option A</a></td>
+                <td><a href="property-details.html" class="btn btn-primary">Choose Option B</a></td>
+                <td><a href="property-details.html" class="btn btn-primary">Choose Option C</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </main>
 
     <footer>
       <div class="container footer-grid">
         <div>
           <strong>SINIK Holdings</strong>
-          <p>Building Tomorrow, Together.</p>
+          <p>Zimbabwe's verified property marketplace with USD/ZiG pricing and digital paperwork support.</p>
         </div>
         <div>
-          <p>Zimbabwe property marketplace for buying, renting, leasing and investment.</p>
-          <p>USD/ZiG pricing • Verified agents • WhatsApp-first inquiries</p>
+          <strong>Quick Links</strong>
+          <p><a href="listings.html">Listings</a> &bull; <a href="agents.html">Verified Agents</a> &bull; <a href="compare.html">Compare</a></p>
+        </div>
+        <div>
+          <strong>Regulatory</strong>
+          <p>Compliant with the Estate Agents Council of Zimbabwe (EACZ).</p>
         </div>
       </div>
     </footer>
 
-    <a
-      class="whatsapp-float"
-      href="https://wa.me/263000000000?text=Hello%20SINIK%20Holdings,%20I%20would%20like%20to%20inquire%20about%20a%20property."
-      target="_blank"
-      rel="noopener"
-    >
-      WhatsApp
-    </a>
+    <a href="https://wa.me/263772000000" target="_blank" rel="noopener noreferrer" class="whatsapp-float">💬 WhatsApp Concierge</a>
   </body>
 </html>

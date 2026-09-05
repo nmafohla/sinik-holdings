@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SINIK Holdings | Zimbabwe Property Marketplace</title>
+    <title>Modern Family Home in Borrowdale | SINIK Holdings</title>
     <meta
       name="description"
-      content="Zimbabwe-focused property marketplace with USD/ZiG pricing, verified agents, WhatsApp inquiries, lease support and mobile-first listings."
+      content="5-bedroom luxury estate in Borrowdale, Harare. Featuring 10kVA solar, prolific borehole, sparkling pool, clean Title Deed, and lush 2,400m² grounds."
     />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
@@ -19,108 +19,353 @@
           <img src="assets/images/sinik-logo.jpg" alt="SINIK Holdings logo" />
           <strong>SINIK Holdings</strong>
         </a>
-
         <button class="menu-btn" onclick="toggleMenu()">Menu</button>
-
         <nav class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="listings.html">Listings</a>
           <a href="agents.html">Agents</a>
           <a href="compare.html">Compare</a>
           <a href="dashboard.html">Dashboard</a>
+          <div class="currency-switcher">
+            <button class="currency-btn active" data-currency="USD" onclick="setCurrency('USD')">USD</button>
+            <button class="currency-btn" data-currency="ZiG" onclick="setCurrency('ZiG')">ZiG</button>
+          </div>
           <a href="index.html#contact" class="btn btn-primary">List Property</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Verified Listing</p>
-            <h1>Modern Family Home in Borrowdale</h1>
-            <p>Borrowdale, Harare • House for Sale • USD 185,000 • ZiG equivalent available</p>
+    <main class="section">
+      <div class="container">
+        <!-- Breadcrumb & Title Header -->
+        <div class="section-heading">
+          <p class="eyebrow">Verified Listing &bull; Ref: SH-BOR-042</p>
+          <h1>Modern Family Home in Borrowdale</h1>
+          <p>Borrowdale West, Harare &bull; 5 Beds &bull; 4 Baths &bull; 2,400 m² Stand &bull; Title Deed Ready</p>
+          <div class="actions" style="margin-top: 14px">
+            <span class="price" data-usd="420000" style="font-size: 2rem">USD 420,000</span>
+            <span class="badge badge-green">✓ Clean Title Deed</span>
+            <span class="badge badge-blue">⚡ 10kVA Solar</span>
+            <span class="badge badge-warning">💧 Prolific Borehole</span>
+            <button class="btn btn-outline" onclick="saveFavorite(this, 'SH-BOR-042')">♡ Save Property</button>
           </div>
-          <div class="split">
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80"
-                alt="Modern home"
-              />
-            </div>
-            <div class="panel">
-              <span class="badge badge-green">Verified Property</span>
-              <span class="badge badge-blue">Verified Agent</span>
-              <h2>USD 185,000</h2>
-              <p>
-                Beautiful 4-bedroom family home with modern finishes, secure walling, borehole
-                support and easy access to local amenities.
-              </p>
-              <div class="meta">
-                <span>4 Beds</span><span>3 Baths</span><span>850m²</span
-                ><span>Video tour available</span>
-              </div>
-              <div class="actions">
-                <a
-                  class="btn btn-whatsapp"
-                  href="https://wa.me/263000000000?text=Hello,%20I%20am%20interested%20in%20the%20Borrowdale%20property"
-                  target="_blank"
-                  >Chat Agent on WhatsApp</a
-                >
-                <button class="btn btn-outline" onclick="saveFavorite(this)">
-                  ♡ Save Favorite
-                </button>
-              </div>
+        </div>
+
+        <!-- Rich Photo Gallery Grid with Modern Layout -->
+        <div class="gallery-grid">
+          <div class="gallery-item main" onclick="openMediaModal('lightboxModal')">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80" alt="Borrowdale Estate Front Elevation" fetchpriority="high" />
+            <div class="gallery-overlay">🔍 View Fullscreen Photos</div>
+          </div>
+          <div class="gallery-item" onclick="openMediaModal('lightboxModal')">
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Designer Fitted Kitchen" loading="lazy" />
+          </div>
+          <div class="gallery-item" onclick="openMediaModal('lightboxModal')">
+            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80" alt="Master Ensuite Suite" loading="lazy" />
+          </div>
+          <div class="gallery-item" onclick="openMediaModal('lightboxModal')">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Swimming Pool & Entertainment Area" loading="lazy" />
+          </div>
+          <div class="gallery-item" onclick="openMediaModal('videoModal')">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Virtual Walkthrough Preview" loading="lazy" />
+            <div class="gallery-overlay">▶ Watch 4K Video Tour</div>
+          </div>
+        </div>
+
+        <!-- Infrastructure & Utility Highlights (Zimbabwe Critical Specs) -->
+        <div class="spec-grid">
+          <div class="spec-box">
+            <div class="spec-icon">⚡</div>
+            <div class="spec-meta">
+              <strong>Solar Power Installation</strong>
+              <span>10kVA Hybrid Deye Inverter + 15kWh Lithium Battery bank (ZESA Grid Net-Metering enabled).</span>
             </div>
           </div>
-          <div style="height: 34px"></div>
-          <div class="split">
-            <div class="panel">
-              <h3>Property Gallery</h3>
-              <p>Multiple images, video tour and 360° virtual tour can be added here.</p>
-              <div class="actions">
-                <span class="badge badge-dark">Photo Gallery</span
-                ><span class="badge badge-dark">Video Tour</span
-                ><span class="badge badge-dark">360° Tour</span>
-              </div>
+          <div class="spec-box">
+            <div class="spec-icon">💧</div>
+            <div class="spec-meta">
+              <strong>Prolific Borehole</strong>
+              <span>85m depth with high yield (4,500 L/hr) + 2x 5,000L Pioneer water storage tanks with filtration.</span>
             </div>
-            <div class="panel">
-              <h3>Inquiry Form</h3>
-              <form onsubmit="handleInquiry(event)">
-                <input type="text" placeholder="Name" required />
-                <input type="tel" placeholder="Phone" required />
-                <input type="email" placeholder="Email" />
-                <textarea placeholder="Message" required>
-I am interested in this property.</textarea>
-                <button class="btn btn-primary" type="submit">Send Inquiry</button>
-                <p id="inquiryMessage"></p>
-              </form>
+          </div>
+          <div class="spec-box">
+            <div class="spec-icon">📜</div>
+            <div class="spec-meta">
+              <strong>Clean Title Deed</strong>
+              <span>Fully unencumbered Title Deed registered at Zimbabwe Deeds Registry. Ready for conveyancing.</span>
+            </div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-icon">🛡️</div>
+            <div class="spec-meta">
+              <strong>Full Perimeter Security</strong>
+              <span>Electric fence, 12-channel CCTV, motorized gate, razor wire, and 24/7 rapid response guard link.</span>
+            </div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-icon">🏊</div>
+            <div class="spec-meta">
+              <strong>Recreation & Outdoors</strong>
+              <span>All-weather paved driveway, sparkling pool, covered veranda, built-in braai, manicured Msasa trees.</span>
+            </div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-icon">🏡</div>
+            <div class="spec-meta">
+              <strong>Staff & Parking</strong>
+              <span>Double lockup garage, double carport, plus self-contained 2-room staff quarters with kitchenette.</span>
             </div>
           </div>
         </div>
-      </section>
+
+        <!-- Split Content: Left Details & Right Contact / Calculator -->
+        <div class="split" style="align-items: start; margin-top: 36px">
+          <div>
+            <!-- Tabbed Specifications Architecture -->
+            <div class="tab-container panel">
+              <div class="tab-nav">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-overview')">Overview</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-features')">Features & Finishes</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-legal')">Legal & Conveyancing</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-location')">Location & Nearby</button>
+              </div>
+
+              <!-- Tab 1: Overview -->
+              <div id="tab-overview" class="tab-panel active">
+                <h3>Executive Living in Harare North</h3>
+                <p style="margin: 12px 0">
+                  Nestled in the prestigious Borrowdale West precinct, this executive architectural gem delivers luxurious family living paired with complete off-grid independence.
+                  Designed with seamless indoor-outdoor flow, vaulted teak ceilings, and expansive floor-to-ceiling glass embracing Zimbabwe's radiant sunshine.
+                </p>
+                <p>
+                  The expansive master wing features a walk-in dressing salon, private patio, and spa ensuite. Three spacious living lounges, a formal dining hall, executive study,
+                  and state-of-the-art chef's kitchen ensure unrivaled comfort for family living and executive diplomacy.
+                </p>
+              </div>
+
+              <!-- Tab 2: Features -->
+              <div id="tab-features" class="tab-panel">
+                <h3>Key Amenities & Finishes</h3>
+                <div class="amenities-grid">
+                  <div class="amenity-item"><span class="amenity-check">✓</span> 5 Luxury En-suite Bedrooms</div>
+                  <div class="amenity-item"><span class="amenity-check">✓</span> Granite & Quartz Fitted Kitchen</div>
+                  <div class="amenity-item"><span class="amenity-check">✓</span> 10kVA Complete Solar System</div>
+                  <div class="amenity-item"><span class="amenity-check">✓</span> 85m Prolific Tested Borehole</div>
+                  <div class="amenity-item"><span class="amenity-check">✓</span> 10,000L Water Storage Tanks</div>
+                  <div class="amenity-item"><span class="amenity-check">✓</span> Deep Swimming Pool & Gazebo</div>
+                  <div class="amenity-item"><span class="amenity-check">✓</span> Double Lockup Garage</div>
+                  <div class="amenity-item"><span class="amenity-check">✓</span> 2-Bed Staff Quarters</div>
+                </div>
+              </div>
+
+              <!-- Tab 3: Legal & Costs -->
+              <div id="tab-legal" class="tab-panel">
+                <h3>Transaction & Statutory Cost Estimates</h3>
+                <p style="margin-bottom: 12px">Estimated purchase transaction costs under Zimbabwean law:</p>
+                <div class="compare-line"><span>Purchase Price</span><strong>USD 420,000</strong></div>
+                <div class="compare-line"><span>Stamp Duty (ZIMRA scale)</span><strong>~USD 16,800</strong></div>
+                <div class="compare-line"><span>Conveyancing Legal Fees (Law Society)</span><strong>~USD 12,600</strong></div>
+                <div class="compare-line"><span>Deeds Office Registration</span><strong>~USD 250</strong></div>
+                <div class="compare-line"><strong>Estimated Total Investment</strong><strong style="color: var(--primary-dark)">~USD 449,650</strong></div>
+              </div>
+
+              <!-- Tab 4: Location -->
+              <div id="tab-location" class="tab-panel">
+                <h3>Neighborhood Amenities (Borrowdale, Harare)</h3>
+                <div class="location-list">
+                  <span>Sam Levy's Village Shopping Mall <strong>2.4 km &bull; 4 mins</strong></span>
+                  <span>Borrowdale Brooke Golf Club <strong>5.1 km &bull; 8 mins</strong></span>
+                  <span>St. John's College & Prep School <strong>3.8 km &bull; 6 mins</strong></span>
+                  <span>Trauma Centre Borrowdale <strong>3.1 km &bull; 5 mins</strong></span>
+                  <span>Harare CBD <strong>14.5 km &bull; 20 mins</strong></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Virtual Video Tour Preview Box -->
+            <div class="video-preview-card" style="margin-top: 24px">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="4K Video Tour Preview" />
+              <button class="play-button" onclick="openMediaModal('videoModal')" aria-label="Play 4K video tour">▶</button>
+            </div>
+          </div>
+
+          <!-- Right Sidebar: Agent Contact & Direct Mortgage Calculator -->
+          <div>
+            <!-- Certified Agent Card -->
+            <div class="panel" style="margin-bottom: 22px">
+              <div class="agent-profile">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Ruvimbo Mhere" class="agent-avatar" />
+                <div>
+                  <strong>Ruvimbo Mhere</strong>
+                  <p style="font-size: 0.88rem">Borrowdale Luxury Specialist &bull; EACZ Certified</p>
+                  <span class="badge badge-green">Verified Partner</span>
+                </div>
+              </div>
+
+              <div class="actions" style="margin: 18px 0 14px">
+                <a
+                  href="https://wa.me/263772000000?text=Hi%20Ruvimbo%2C%20I%20am%20interested%20in%20the%20Borrowdale%205-bed%20home%20(Ref%3A%20SH-BOR-042)%20on%20SINIK%20Holdings."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-whatsapp"
+                  style="width: 100%"
+                  >💬 WhatsApp Agent Directly</a
+                >
+              </div>
+
+              <form onsubmit="handleInquiry(event)" class="calculator">
+                <input type="text" placeholder="Your Name" required />
+                <input type="tel" placeholder="Phone / WhatsApp Number" required />
+                <input type="email" placeholder="Email Address" required />
+                <textarea placeholder="I'd like to schedule a private viewing for this property." required></textarea>
+                <button type="submit" class="btn btn-primary">Book Private Viewing</button>
+                <p id="inquiryMessage" style="color: var(--success); font-weight: 800; font-size: 0.88rem"></p>
+              </form>
+            </div>
+
+            <!-- Instant Mortgage Repayment Calculator -->
+            <div class="panel">
+              <p class="eyebrow">Finance Calculator</p>
+              <h3>Mortgage Estimator</h3>
+              <div class="calculator" style="margin-top: 14px">
+                <label style="font-weight: 700; font-size: 0.88rem">Property Price (USD)</label>
+                <input type="number" id="propertyPrice" value="420000" oninput="calculateMortgage()" />
+                <label style="font-weight: 700; font-size: 0.88rem">Deposit (USD)</label>
+                <input type="number" id="deposit" value="100000" oninput="calculateMortgage()" />
+                <label style="font-weight: 700; font-size: 0.88rem">Loan Term (Years)</label>
+                <input type="number" id="years" value="20" oninput="calculateMortgage()" />
+                <label style="font-weight: 700; font-size: 0.88rem">Annual Interest Rate (%)</label>
+                <input type="number" id="rate" value="12" oninput="calculateMortgage()" />
+                <div id="mortgageResult" class="calc-result">Estimated monthly payment: USD 3,523.47</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Similar Properties Section -->
+        <section class="section" style="padding-bottom: 0">
+          <div class="section-heading">
+            <p class="eyebrow">Handpicked For You</p>
+            <h2>Similar Properties in Harare</h2>
+          </div>
+          <div class="card-grid">
+            <div class="property-card">
+              <div class="property-image">
+                <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" alt="Highlands Property" loading="lazy" />
+                <div class="badges"><span class="badge badge-green">Verified</span></div>
+              </div>
+              <div class="property-content">
+                <div class="price-row">
+                  <span class="price" data-usd="360000">USD 360,000</span>
+                </div>
+                <h3>Executive Residence, Highlands</h3>
+                <p>4 Beds &bull; 3 Baths &bull; 2,000 m² &bull; Solar + Borehole</p>
+                <a href="property-details.html" class="btn btn-outline">View Details</a>
+              </div>
+            </div>
+
+            <div class="property-card">
+              <div class="property-image">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Mt Pleasant Property" loading="lazy" />
+                <div class="badges"><span class="badge badge-blue">New Listing</span></div>
+              </div>
+              <div class="property-content">
+                <div class="price-row">
+                  <span class="price" data-usd="310000">USD 310,000</span>
+                </div>
+                <h3>Contemporary Villa, Mt Pleasant</h3>
+                <p>4 Beds &bull; 3.5 Baths &bull; 1,800 m² &bull; Pool + Solar</p>
+                <a href="property-details.html" class="btn btn-outline">View Details</a>
+              </div>
+            </div>
+
+            <div class="property-card">
+              <div class="property-image">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Avondale Townhouse" loading="lazy" />
+                <div class="badges"><span class="badge badge-warning">Prime</span></div>
+              </div>
+              <div class="property-content">
+                <div class="price-row">
+                  <span class="price" data-usd="240000">USD 240,000</span>
+                </div>
+                <h3>Secure Townhouse, Avondale</h3>
+                <p>3 Beds &bull; 2.5 Baths &bull; Gated Complex &bull; Borehole</p>
+                <a href="property-details.html" class="btn btn-outline">View Details</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
+
+    <!-- Fullscreen Media Lightbox Dialog -->
+    <dialog id="lightboxModal" class="media-modal" closedby="any" aria-label="Property Photo Gallery">
+      <div class="modal-header">
+        <strong>Borrowdale Luxury Estate — Photo Gallery</strong>
+        <button class="modal-close" onclick="closeMediaModal('lightboxModal')">&times;</button>
+      </div>
+      <div class="modal-body" style="text-align: center">
+        <img
+          src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80"
+          alt="High Resolution Photo"
+          style="border-radius: 14px; max-height: 520px; object-fit: cover"
+        />
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px">
+          <span style="color: var(--muted); font-size: 0.9rem">Image 1 of 5 &bull; Architectural Exterior Facade</span>
+          <a href="https://wa.me/263772000000" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">Inquire on WhatsApp</a>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- 4K Video Tour Dialog -->
+    <dialog id="videoModal" class="media-modal" closedby="any" aria-label="4K Video Tour Walkthrough">
+      <div class="modal-header">
+        <strong>4K Video Walkthrough — Borrowdale Home</strong>
+        <button class="modal-close" onclick="closeMediaModal('videoModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 14px; background: #000">
+          <iframe
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0"
+            src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=0"
+            title="SINIK Holdings Property Tour"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center">
+          <span>Hosted by SINIK Holdings Verified Media Services</span>
+          <button class="btn btn-primary" onclick="closeMediaModal('videoModal')">Close Tour</button>
+        </div>
+      </div>
+    </dialog>
 
     <footer>
       <div class="container footer-grid">
         <div>
           <strong>SINIK Holdings</strong>
-          <p>Building Tomorrow, Together.</p>
+          <p>Zimbabwe's trusted marketplace for verified residential, commercial, and land investments.</p>
         </div>
         <div>
-          <p>Zimbabwe property marketplace for buying, renting, leasing and investment.</p>
-          <p>USD/ZiG pricing • Verified agents • WhatsApp-first inquiries</p>
+          <strong>Quick Links</strong>
+          <p>
+            <a href="listings.html">All Listings</a> &bull; <a href="agents.html">Verified Agents</a> &bull;
+            <a href="compare.html">Compare</a>
+          </p>
+        </div>
+        <div>
+          <strong>Regulatory</strong>
+          <p>Compliant with Estate Agents Council of Zimbabwe (EACZ) standards.</p>
         </div>
       </div>
     </footer>
 
     <a
-      class="whatsapp-float"
-      href="https://wa.me/263000000000?text=Hello%20SINIK%20Holdings,%20I%20would%20like%20to%20inquire%20about%20a%20property."
+      href="https://wa.me/263772000000?text=Hi%20SINIK%20Holdings%2C%20I%20have%20an%20inquiry%20regarding%20property%20listings."
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
+      class="whatsapp-float"
+      >💬 WhatsApp Concierge</a
     >
-      WhatsApp
-    </a>
   </body>
 </html>
