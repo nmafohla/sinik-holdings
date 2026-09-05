@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SINIK Holdings | Zimbabwe Property Marketplace</title>
+    <meta
+      name="description"
+      content="Zimbabwe-focused property marketplace with USD/ZiG pricing, verified agents, WhatsApp inquiries, lease support and mobile-first listings."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="brand">
+          <img src="assets/images/sinik-logo.jpg" alt="SINIK Holdings logo" />
+          <strong>SINIK Holdings</strong>
+        </a>
+
+        <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="listings.html">Listings</a>
+          <a href="agents.html">Agents</a>
+          <a href="compare.html">Compare</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="index.html#contact" class="btn btn-primary">List Property</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Zimbabwe Property Marketplace</p>
+            <h1>Find verified homes, stands and commercial properties.</h1>
+            <p>
+              Buy, rent or lease property across Zimbabwe with USD/ZiG pricing, verified agents,
+              WhatsApp inquiries and digital paperwork support.
+            </p>
+            <div class="actions">
+              <a href="listings.html" class="btn btn-primary">Browse Properties</a>
+              <a href="#trust" class="btn btn-primary">How We Build Trust</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="search-box">
+              <h3>Search properties</h3>
+              <div class="search-grid">
+                <select>
+                  <option>Buy</option>
+                  <option>Rent</option>
+                  <option>Lease</option>
+                </select>
+                <select>
+                  <option>Harare</option>
+                  <option>Bulawayo</option>
+                  <option>Zvishavane</option>
+                  <option>Ruwa</option>
+                  <option>Victoria Falls</option>
+                </select>
+                <select>
+                  <option>Property Type</option>
+                  <option>House</option>
+                  <option>Stand</option>
+                  <option>Commercial</option>
+                  <option>Apartment</option>
+                </select>
+                <select>
+                  <option>Currency</option>
+                  <option>USD</option>
+                  <option>ZiG</option>
+                </select>
+                <input type="number" placeholder="Min price" />
+                <input type="number" placeholder="Max price" />
+              </div>
+              <a href="listings.html" class="btn btn-primary">Search Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="container trust-strip">
+          <div class="trust-item">
+            <strong>Verified Listings</strong>
+            <p>Reduce scam risk.</p>
+          </div>
+          <div class="trust-item">
+            <strong>WhatsApp First</strong>
+            <p>Fast local inquiries.</p>
+          </div>
+          <div class="trust-item">
+            <strong>USD / ZiG</strong>
+            <p>Dual pricing support.</p>
+          </div>
+          <div class="trust-item">
+            <strong>Lease Support</strong>
+            <p>Digital paperwork ready.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Featured Properties</p>
+            <h2>Popular listings across Zimbabwe.</h2>
+            <p>
+              Featured properties include homes for rent and sale, stands, commercial spaces and
+              investment opportunities.
+            </p>
+          </div>
+          <div class="card-grid">
+            <article class="property-card">
+              <div class="property-image">
+                <img
+                  src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80"
+                  alt="Modern Family Home in Borrowdale"
+                />
+                <div class="badges">
+                  <span class="badge badge-green">Verified</span>
+                  <span class="badge badge-blue">House for Sale</span>
+                </div>
+              </div>
+              <div class="property-content">
+                <div class="price-row">
+                  <div>
+                    <div class="price">USD 185,000</div>
+                    <p>ZiG equivalent available</p>
+                  </div>
+                  <button class="btn btn-outline" onclick="saveFavorite(this)">♡ Save</button>
+                </div>
+                <h3>Modern Family Home in Borrowdale</h3>
+                <p>Borrowdale, Harare</p>
+                <div class="meta"><span>4 Beds • 3 Baths • 850m²</span></div>
+                <div class="actions">
+                  <a class="btn btn-primary" href="property-details.html">View Details</a>
+                  <a
+                    class="btn btn-whatsapp"
+                    href="https://wa.me/263000000000?text=Hello,%20I%20am%20interested%20in%20Modern%20Family%20Home%20in%20Borrowdale"
+                    target="_blank"
+                    >WhatsApp Agent</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="property-card">
+              <div class="property-image">
+                <img
+                  src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80"
+                  alt="3-Bedroom Rental in Zvishavane"
+                />
+                <div class="badges">
+                  <span class="badge badge-green">Verified</span>
+                  <span class="badge badge-blue">House for Rent</span>
+                </div>
+              </div>
+              <div class="property-content">
+                <div class="price-row">
+                  <div>
+                    <div class="price">USD 250/month</div>
+                    <p>ZiG accepted</p>
+                  </div>
+                  <button class="btn btn-outline" onclick="saveFavorite(this)">♡ Save</button>
+                </div>
+                <h3>3-Bedroom Rental in Zvishavane</h3>
+                <p>Zvishavane</p>
+                <div class="meta"><span>3 Beds • 2 Baths • Walled</span></div>
+                <div class="actions">
+                  <a class="btn btn-primary" href="property-details.html">View Details</a>
+                  <a
+                    class="btn btn-whatsapp"
+                    href="https://wa.me/263000000000?text=Hello,%20I%20am%20interested%20in%203-Bedroom%20Rental%20in%20Zvishavane"
+                    target="_blank"
+                    >WhatsApp Agent</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="property-card">
+              <div class="property-image">
+                <img
+                  src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80"
+                  alt="Residential Stand in Ruwa"
+                />
+                <div class="badges">
+                  <span class="badge badge-green">Verified</span>
+                  <span class="badge badge-blue">Residential Stand</span>
+                </div>
+              </div>
+              <div class="property-content">
+                <div class="price-row">
+                  <div>
+                    <div class="price">USD 22,500</div>
+                    <p>ZiG equivalent available</p>
+                  </div>
+                  <button class="btn btn-outline" onclick="saveFavorite(this)">♡ Save</button>
+                </div>
+                <h3>Residential Stand in Ruwa</h3>
+                <p>Ruwa, Mashonaland East</p>
+                <div class="meta"><span>500m² • Serviced • Title Deeds</span></div>
+                <div class="actions">
+                  <a class="btn btn-primary" href="property-details.html">View Details</a>
+                  <a
+                    class="btn btn-whatsapp"
+                    href="https://wa.me/263000000000?text=Hello,%20I%20am%20interested%20in%20Residential%20Stand%20in%20Ruwa"
+                    target="_blank"
+                    >WhatsApp Agent</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="trust">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Built for Zimbabwe</p>
+            <h2>Trust-focused features for buyers, renters and agents.</h2>
+          </div>
+          <div class="card-grid">
+            <div class="feature-card">
+              <div class="feature-icon">✓</div>
+              <h3>Verified Agents</h3>
+              <p>Agent profiles, contact details, listed properties and verification badges.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">ID</div>
+              <h3>ID Verification</h3>
+              <p>Optional national ID and proof of income checks for rentals.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">WA</div>
+              <h3>WhatsApp Enquiries</h3>
+              <p>Every listing can include a direct “Chat Agent on WhatsApp” button.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">$</div>
+              <h3>USD / ZiG Pricing</h3>
+              <p>Listings can show USD pricing and ZiG equivalent where needed.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">360</div>
+              <h3>Virtual Tours</h3>
+              <p>Property video and 360° tour placeholders for premium listings.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">✍</div>
+              <h3>Digital Leases</h3>
+              <p>Lease agreements and electronic signature workflow can be connected later.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Map Search</p>
+            <h2>Explore properties by location.</h2>
+            <p>
+              Map integration helps users view nearby properties, compare suburbs and find stands,
+              rentals or commercial opportunities faster.
+            </p>
+            <div class="actions">
+              <a href="listings.html" class="btn btn-primary">View Listings</a>
+              <a href="compare.html" class="btn btn-outline">Compare Properties</a>
+            </div>
+          </div>
+          <div class="map-wrapper">
+            <iframe
+              title="Zimbabwe property map"
+              loading="lazy"
+              src="https://www.google.com/maps?q=Zimbabwe&output=embed"
+            >
+            </iframe>
+
+            <div class="map-locations">
+              <h3>Browse Properties by Location</h3>
+              <p>
+                Select popular Zimbabwean locations for buying, renting, leasing and investment
+                opportunities.
+              </p>
+
+              <div class="location-list">
+                <span>Harare <strong>125</strong></span>
+                <span>Bulawayo <strong>54</strong></span>
+                <span>Zvishavane <strong>17</strong></span>
+                <span>Ruwa <strong>32</strong></span>
+                <span>Victoria Falls <strong>23</strong></span>
+                <span>Mutare <strong>19</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">List With SINIK</p>
+            <h2>Agents and owners can list properties.</h2>
+            <p>
+              Submit your property details, photos, price, location, contact information and
+              verification documents.
+            </p>
+          </div>
+          <div class="panel">
+            <form onsubmit="handleInquiry(event)">
+              <input type="text" placeholder="Full name" required />
+              <input type="tel" placeholder="Phone / WhatsApp number" required />
+              <input type="email" placeholder="Email address" />
+              <select>
+                <option>I am an agent</option>
+                <option>I am a property owner</option>
+                <option>I am looking for property</option>
+              </select>
+              <textarea placeholder="Tell us about the property or inquiry" required></textarea>
+              <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+              <p id="inquiryMessage"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <strong>SINIK Holdings</strong>
+          <p>Building Tomorrow, Together.</p>
+        </div>
+        <div>
+          <p>Zimbabwe property marketplace for buying, renting, leasing and investment.</p>
+          <p>USD/ZiG pricing • Verified agents • WhatsApp-first inquiries</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/263000000000?text=Hello%20SINIK%20Holdings,%20I%20would%20like%20to%20inquire%20about%20a%20property."
+      target="_blank"
+      rel="noopener"
+    >
+      WhatsApp
+    </a>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SINIK Holdings | Zimbabwe Property Marketplace</title>
+    <meta
+      name="description"
+      content="Zimbabwe-focused property marketplace with USD/ZiG pricing, verified agents, WhatsApp inquiries, lease support and mobile-first listings."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="brand">
+          <img src="assets/images/sinik-logo.jpg" alt="SINIK Holdings logo" />
+          <strong>SINIK Holdings</strong>
+        </a>
+
+        <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="listings.html">Listings</a>
+          <a href="agents.html">Agents</a>
+          <a href="compare.html">Compare</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="index.html#contact" class="btn btn-primary">List Property</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Property Comparison</p>
+            <h1>Compare properties side by side.</h1>
+            <p>
+              Compare price, location, bedrooms, land size, verification status and agent details.
+            </p>
+          </div>
+          <div class="compare-grid">
+            <div class="compare-card">
+              <h3>Borrowdale Home</h3>
+              <div class="compare-line"><span>Price</span><strong>USD 185,000</strong></div>
+              <div class="compare-line"><span>Location</span><strong>Harare</strong></div>
+              <div class="compare-line"><span>Bedrooms</span><strong>4</strong></div>
+              <div class="compare-line"><span>Status</span><strong>Verified</strong></div>
+            </div>
+            <div class="compare-card">
+              <h3>Zvishavane Rental</h3>
+              <div class="compare-line"><span>Price</span><strong>USD 250/mo</strong></div>
+              <div class="compare-line"><span>Location</span><strong>Zvishavane</strong></div>
+              <div class="compare-line"><span>Bedrooms</span><strong>3</strong></div>
+              <div class="compare-line"><span>Status</span><strong>Verified</strong></div>
+            </div>
+            <div class="compare-card">
+              <h3>Ruwa Stand</h3>
+              <div class="compare-line"><span>Price</span><strong>USD 22,500</strong></div>
+              <div class="compare-line"><span>Location</span><strong>Ruwa</strong></div>
+              <div class="compare-line"><span>Land size</span><strong>500m²</strong></div>
+              <div class="compare-line"><span>Status</span><strong>Title Deeds</strong></div>
+            </div>
+          </div>
+          <div style="height: 34px"></div>
+          <div class="panel">
+            <h2>Mortgage Calculator</h2>
+            <div class="calculator">
+              <input id="propertyPrice" type="number" placeholder="Property price" value="185000" />
+              <input id="deposit" type="number" placeholder="Deposit" value="25000" />
+              <input id="years" type="number" placeholder="Years" value="20" />
+              <input id="rate" type="number" placeholder="Interest rate %" value="12" />
+              <button class="btn btn-primary" onclick="calculateMortgage()">Calculate</button>
+              <div id="mortgageResult" class="calc-result">
+                Estimated monthly payment will appear here.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <strong>SINIK Holdings</strong>
+          <p>Building Tomorrow, Together.</p>
+        </div>
+        <div>
+          <p>Zimbabwe property marketplace for buying, renting, leasing and investment.</p>
+          <p>USD/ZiG pricing • Verified agents • WhatsApp-first inquiries</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/263000000000?text=Hello%20SINIK%20Holdings,%20I%20would%20like%20to%20inquire%20about%20a%20property."
+      target="_blank"
+      rel="noopener"
+    >
+      WhatsApp
+    </a>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+@media (max-width: 960px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 82px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background: white;
+    padding: 22px 4%;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero-grid,
+  .split,
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid,
+  .compare-grid,
+  .dashboard-cards,
+  .trust-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .card-grid,
+  .compare-grid,
+  .dashboard-cards,
+  .trust-strip,
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 58px 0;
+  }
+
+  .brand strong {
+    font-size: 1.05rem;
+  }
+
+  .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hero {
+    padding-top: 58px;
+  }
+}
+
+/* Real map preview with Zimbabwe locations */
+.map-wrapper {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  min-height: 460px;
+  background: white;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  min-height: 460px;
+  border: 0;
+  display: block;
+}
+
+.map-locations {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  width: min(360px, calc(100% - 36px));
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.16);
+}
+
+.location-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.location-list span {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f5f8fb;
+  color: var(--dark);
+  font-weight: 800;
+}
+
+.location-list strong {
+  color: var(--primary-dark);
+}
+
+@media (max-width: 640px) {
+  .map-locations {
+    position: static;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .map-wrapper iframe {
+    min-height: 360px;
+  }
+}

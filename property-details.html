@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SINIK Holdings | Zimbabwe Property Marketplace</title>
+    <meta
+      name="description"
+      content="Zimbabwe-focused property marketplace with USD/ZiG pricing, verified agents, WhatsApp inquiries, lease support and mobile-first listings."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="brand">
+          <img src="assets/images/sinik-logo.jpg" alt="SINIK Holdings logo" />
+          <strong>SINIK Holdings</strong>
+        </a>
+
+        <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="listings.html">Listings</a>
+          <a href="agents.html">Agents</a>
+          <a href="compare.html">Compare</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="index.html#contact" class="btn btn-primary">List Property</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Verified Listing</p>
+            <h1>Modern Family Home in Borrowdale</h1>
+            <p>Borrowdale, Harare • House for Sale • USD 185,000 • ZiG equivalent available</p>
+          </div>
+          <div class="split">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80"
+                alt="Modern home"
+              />
+            </div>
+            <div class="panel">
+              <span class="badge badge-green">Verified Property</span>
+              <span class="badge badge-blue">Verified Agent</span>
+              <h2>USD 185,000</h2>
+              <p>
+                Beautiful 4-bedroom family home with modern finishes, secure walling, borehole
+                support and easy access to local amenities.
+              </p>
+              <div class="meta">
+                <span>4 Beds</span><span>3 Baths</span><span>850m²</span
+                ><span>Video tour available</span>
+              </div>
+              <div class="actions">
+                <a
+                  class="btn btn-whatsapp"
+                  href="https://wa.me/263000000000?text=Hello,%20I%20am%20interested%20in%20the%20Borrowdale%20property"
+                  target="_blank"
+                  >Chat Agent on WhatsApp</a
+                >
+                <button class="btn btn-outline" onclick="saveFavorite(this)">
+                  ♡ Save Favorite
+                </button>
+              </div>
+            </div>
+          </div>
+          <div style="height: 34px"></div>
+          <div class="split">
+            <div class="panel">
+              <h3>Property Gallery</h3>
+              <p>Multiple images, video tour and 360° virtual tour can be added here.</p>
+              <div class="actions">
+                <span class="badge badge-dark">Photo Gallery</span
+                ><span class="badge badge-dark">Video Tour</span
+                ><span class="badge badge-dark">360° Tour</span>
+              </div>
+            </div>
+            <div class="panel">
+              <h3>Inquiry Form</h3>
+              <form onsubmit="handleInquiry(event)">
+                <input type="text" placeholder="Name" required />
+                <input type="tel" placeholder="Phone" required />
+                <input type="email" placeholder="Email" />
+                <textarea placeholder="Message" required>
+I am interested in this property.</textarea>
+                <button class="btn btn-primary" type="submit">Send Inquiry</button>
+                <p id="inquiryMessage"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <strong>SINIK Holdings</strong>
+          <p>Building Tomorrow, Together.</p>
+        </div>
+        <div>
+          <p>Zimbabwe property marketplace for buying, renting, leasing and investment.</p>
+          <p>USD/ZiG pricing • Verified agents • WhatsApp-first inquiries</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/263000000000?text=Hello%20SINIK%20Holdings,%20I%20would%20like%20to%20inquire%20about%20a%20property."
+      target="_blank"
+      rel="noopener"
+    >
+      WhatsApp
+    </a>
+  </body>
+</html>
