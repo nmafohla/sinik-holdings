@@ -30,6 +30,7 @@ Live Production URL: [https://sinik.hakili.online](https://sinik.hakili.online)
 │   ├── base.css                   # Theme variables, typography, reset, buttons
 │   ├── layout.css                 # Sticky navigation, footer, floating controls
 │   ├── components.css             # Cards, badges, hero, search filters, tables
+│   ├── media.css                  # Lightbox dialogs, 4K video player, tab panels
 │   ├── pages.css                  # Page-specific views, interactive maps, responsive breakpoints
 │   └── style.css                  # Canonical stylesheet importing modular components
 ├── js/
@@ -52,6 +53,33 @@ Live Production URL: [https://sinik.hakili.online](https://sinik.hakili.online)
 ├── tsconfig.json                  # TypeScript compiler options (strict mode)
 └── vercel.json                    # Vercel deployment configuration
 ```
+
+---
+
+## Environment Variables
+
+All configuration is declared in `.env.example`. Create a local `.env` file before running the project:
+
+| Variable   | Description                                | Default       | Where to Get / Scope             |
+| ---------- | ------------------------------------------ | ------------- | -------------------------------- |
+| `PORT`     | Local development port for preview servers | `3000`        | Optional; default local dev port |
+| `NODE_ENV` | Application environment lifecycle flag     | `development` | System environment / CI runner   |
+
+---
+
+## Third-Party Integrations
+
+In accordance with engineering documentation standards, all third-party services integrated into the frontend are documented below:
+
+1. **WhatsApp Click-to-Chat API (`https://wa.me/263...`)**:
+   - Direct lead generation routing inquiries to EACZ-certified agents and concierge desk.
+   - Requires valid E.164 phone numbers for agents.
+2. **YouTube Privacy-Enhanced Iframe Player (`https://www.youtube-nocookie.com/embed/...`)**:
+   - Powers the 4K virtual walkthrough tours inside modal dialogs without third-party tracking cookies.
+3. **Google Maps Embed (`https://www.google.com/maps`)**:
+   - Location inspection iframe for comparing provincial hubs and suburbs across Zimbabwe.
+4. **Unsplash High-Resolution CDN (`https://images.unsplash.com`)**:
+   - Responsive, optimized architectural imagery with fetch priority and lazy loading attributes.
 
 ---
 
